@@ -8,7 +8,7 @@
 header{
 	margin-top: 31px;
 	width: 100%;
-	background-image: url(/Projeto-Pessoal/MotoDicas/css/banner-do-cadastro2.jpg);
+	background-image: url(../css/banner-do-cadastro.jpg);
 	background-size: cover;
 
 }
@@ -231,7 +231,7 @@ iframe {
   margin-top: -30px;
   display: block;
   font-family: Montserrat-ExtraBold;
-  font-size: 25px;
+  font-size: 24px;
   color: #fffdfd;
   line-height: 1.2;
   padding-bottom: 44px;
@@ -243,7 +243,7 @@ input.input1 {
   height: 50px;
   border-radius: 25px;
   padding:  30px;
-  margin-left: 45px;
+  margin-left: 30px;
 }
 input.input1.sombra-input1 {
   border-radius: 25px;
@@ -337,7 +337,7 @@ textarea.input1 + .sombra-input1 {
   justify-content: center;
   align-items: center;
   padding: 0 25px;
-  margin-left: 21%;
+  margin-left: 10%;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -345,12 +345,6 @@ textarea.input1 + .sombra-input1 {
   transition: all 0.4s;
 }
 
-.cadastro-form{
-
-  margin-top: 100px;
-
-
-}
 
 .cadastro-form-btn i {
   margin-left: 7px;

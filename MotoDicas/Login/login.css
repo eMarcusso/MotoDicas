@@ -1,0 +1,38 @@
+.login{
+    background-color: pink;
+    width: 40%;
+
+}
+
+.ipt_login{
+    margin-top: 15px;
+    margin-left: 30%;
+    margin-bottom: 15px;
+}
+
+input{
+
+    height: 25px;
+    background-color: rgb(241, 239, 224);
+    border-radius: 8px;
+}
+
+button{
+
+    width: 30%;
+    height: 25px;
+    background-color: rgb(241, 239, 224);
+    border-radius: 8px;
+    margin-left: 10%;
+
+}
+
+p{
+    margin-left: 17%;
+
+}
+
+a{
+    margin-left: -10px;
+
+}
