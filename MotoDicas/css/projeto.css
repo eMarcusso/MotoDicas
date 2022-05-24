@@ -1,4 +1,4 @@
-<<<<<<< HEAD:css/projeto.css
+
 
  body {
 	font-family: Century Gothic;
@@ -9,9 +9,8 @@
 /* home e navbar */
 
 header {
-    
 	width: 100%;
-	background-image: url(/Projeto-Pessoal/MotoDicas/imagens/logos/1200-projeto.jpg);
+	background-image: url(./1200-projeto.jpg);
 	background-size: cover;
 }
 
