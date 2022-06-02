@@ -43,6 +43,10 @@ header {
 	margin-left: 8%;
 }
 
+.btn-Qro-Conhecer :hover{
+	background-color: #666666
+}
+
 .Text-Topo {
 	margin-left: 8%;
 	font-family: "Century Gothic", sans-serif;
