@@ -23,16 +23,16 @@
             <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav_list">
-            <li>
+            <!-- <li>
                 <a href="#">
                     <i class='bx bx-search'></i>
                     <input type="text" placeholder="Search...">
                 </a>
                 <span class="tooltip">Search</span>
-            </li>
+            </li> -->
             <li>
                 <a href="#">
-                    <i class='bx bxs-analyse'></i>
+                    <i class='bx bx-pie-chart-alt-2'></i>
                     <span class="links_name">Ranking</span>
                 </a>
                 <span class="tooltip">Ranking</span>
@@ -40,16 +40,16 @@
             <li>
                 <a href="#">
                     <i class='bx bx-clipboard'></i>
-                    <span class="links_name">Dicas de moto</span>
+                    <span class="links_name">Dicas de Moto</span>
                 </a>
                 <span class="tooltip">Dicas de moto</span>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bx-clipboard'></i>
-                    <span class="links_name">Dicas para um entregador</span>
+                    <span class="links_name">Dicas de Motoboy</span>
                 </a>
-                <span class="tooltip">Entregador</span>
+                <span class="tooltip">Dicas Motoboy <span>
             </li>
             <li>
                 <a href="#">
@@ -57,6 +57,13 @@
                     <span class="links_name">Capacetes</span>
                 </a>
                 <span class="tooltip">Capacetes</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-analyse'></i>
+                    <span class="links_name">Sobre </span>
+                </a>
+                <span class="tooltip">Saiba Mais</span>
             </li>
         </ul>
 
@@ -75,8 +82,23 @@
     </div>
     <div class="home_content">
         <div class="text">Home Content</div>
-
     </div>
+
+    <script>
+        let btn = document.querySelector("#btn"); 
+        let sidebar = document.querySelector(".sidebar");     
+        let searchBtn = document.querySelector("bx-search");   
+
+        btn.onclick = function () {
+            sidebar.classList.toggle("active");
+
+        }
+
+        searchBtn.onclick = function () {
+            sidebar.classList.toggle("active");
+            
+        }
+    </script>
 
 </body>
 </html>

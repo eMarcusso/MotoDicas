@@ -18,9 +18,20 @@ body{
     top: 0;
     left: 0;
     height: 100%;
-    width: 300px;
+    width: 78px;
     background: #11101d;
     padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active{
+    width: 300px;
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: none;
+
 }
 
 .logo {
@@ -30,6 +41,8 @@ body{
     color: #fff;
     height: 50px;
     width: 100%;
+    opacity: 0;
+    
 }
 
 .alinha {
@@ -80,7 +93,7 @@ body{
 .sidebar #btn {
     position: absolute;
     color: #fff;
-    left: 90%;
+    left: 50%;
     top: 6px;
     font-size: 20px;
     height: 50px;
@@ -90,13 +103,17 @@ body{
     transform: translateX(-50%);
 }
 
+.sidebar.active #btn{
+    left: 90%;
+}
+
 .sidebar ul {
     margin-top: 100px;
 }
 
 .sidebar ul li{
     position: relative;
-    height: 80px;
+    height: 70px;
     width: 100%;
     margin: 0 5px;
     list-style: none;
@@ -104,41 +121,32 @@ body{
    
 }
 
-/* .sidebar ul li .tooltip{
+.sidebar ul li .tooltip{
     position: absolute;
     left: 122px;
     top: 0%;
-    transform: translateY(-50%);
+    transform: translate(-50% , -50%);
     border-radius: 6px;
     height: 35px;
     width: 122px;
     background: #fff;
     line-height: 35px;
     text-align: center;
-    box-shadow: 0 5s 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     transition: 0s;
     opacity: 0;
     pointer-events: none;
-} */
-
-.sidebar ul li .tooltip{
-    position: absolute;
-    left: 122px;
-    top: 2%;
-    height: 35px;
-    width: 122px;
-    background: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-
-
-
+    display: block;
 }
 
-.sidebar ul li :hover .tooltip{
-    transition: all 0.5s ease ;
+.sidebar.active ul li .tooltip{
+    display: none;
+}
+
+.sidebar ul li:hover .tooltip{
+    transition: all 0.5s ease;
     opacity: 1;
-    top: 50%;
-    
+    top: 31%;
 }
 
 .sidebar ul li input{
@@ -163,7 +171,12 @@ body{
     z-index: 99;
     color: #fff;
     font-size: 22px;
+    transition: all 0.5s ease;
+}
 
+.sidebar ul li .bx-search :hover{
+    background: #fff;
+    color: #1d1b31;
 }
 
 .sidebar ul li a {
@@ -173,6 +186,7 @@ body{
     text-decoration: none;
     transition: all 0.4s ease;
     border-radius: 12px;
+    white-space: nowrap;
 }
 
 .sidebar ul li a:hover{
@@ -190,6 +204,17 @@ body{
     align-items: center;
 }
 
+.sidebar .links_name{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.active .links_name{
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.5s ease;
+}
+
 .sidebar .profile_content{
 
     position: absolute;
@@ -205,12 +230,26 @@ body{
     padding: 10px 6px;
     height: 60px;
     background: #1d1b31;
+    transition: all 0.4s ease;
+}
+
+.sidebar.active .profile_content .profile {
+    background: none;
+
 }
 
 .profile_content .profile .profile_details {
     display: flex;
     align-items: center;
     margin-top: -15px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.sidebar.active .profile .profile_details {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .profile .profile_details img {
@@ -241,21 +280,34 @@ body{
 
 .profile #log_out{
     position: absolute;
-    left: 88%;
+    left: 50%;
     bottom: 5px;
     transform: translateX(-50%);
     min-width: 50px;
     line-height: 50px;
     font-size: 20px;
     border-radius: 12px;
+    text-align: center;
+    transition: 0.4s ease;
+    background: #1d1b31;
 }   
+
+.sidebar.active .profile #log_out{
+    left: 88%;
+}
+
+.sidebar.active .profile #log_out{
+    background: none;
+
+}
 
 .home_content{
 
     position: absolute;
     height: 100%;
-    width: calc(100% - 240px);
-    left: 300px;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
 }
 
 .home_content .text{
@@ -264,4 +316,9 @@ body{
     font-weight: 500;
     color: #1d1b31;
     margin: 12px;
+}
+
+.sidebar.active ~ .home_content{
+    width: calc(100% - 240px);
+    left: 300px;
 }
